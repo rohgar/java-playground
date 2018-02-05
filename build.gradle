@@ -1,0 +1,24 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceSets 
+{
+    main 
+    {
+        java 
+        {
+            srcDirs = ["src"]
+        }
+    }
+}
+
+repositories 
+{
+    mavenCentral()
+}
+
+dependencies 
+{
+  compile 'com.google.code.gson:gson:2.8.1'
+}
+
