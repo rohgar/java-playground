@@ -6,7 +6,7 @@ public class Recursion01
 	public static void main(String[] args)
 	{
 		int n = 2;
-		test(n, n);
+		test(1, n);
 	}
 	
 	private static void test(int nLeft, int nRight)
