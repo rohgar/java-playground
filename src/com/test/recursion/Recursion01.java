@@ -2,13 +2,13 @@ package com.test.recursion;
 
 public class Recursion01
 {
-	
+
 	public static void main(String[] args)
 	{
 		int n = 2;
-		test(1, n);
+		test(n, n);
 	}
-	
+
 	private static void test(int nLeft, int nRight)
 	{
 		if (nLeft < 0 || nRight < 0)
@@ -24,5 +24,5 @@ public class Recursion01
 		test(nLeft - 1, nRight);
 		test(nLeft, nRight - 1);
 	}
-	
+
 }
