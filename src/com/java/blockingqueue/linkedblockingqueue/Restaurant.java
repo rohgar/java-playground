@@ -1,11 +1,11 @@
-package com.test.blockingqueue.linkedblockingqueue;
+package com.java.blockingqueue.linkedblockingqueue;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import com.test.blockingqueue.Customer;
-import com.test.blockingqueue.Waiter;
-import com.test.blockingqueue.Reception;
+import com.java.blockingqueue.Customer;
+import com.java.blockingqueue.Reception;
+import com.java.blockingqueue.Waiter;
 
 /**
  * Restaurant has a capacity of serving n people at a time (i.e. unbounded). THus 

@@ -1,4 +1,4 @@
-package com.test.threads;
+package com.java.threads;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.test.binary;
+package com.java.binary;
 
 public class BitRepresentation
 {

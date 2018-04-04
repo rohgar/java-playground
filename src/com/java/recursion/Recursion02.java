@@ -1,4 +1,4 @@
-package com.test.recursion;
+package com.java.recursion;
 
 public class Recursion02
 {

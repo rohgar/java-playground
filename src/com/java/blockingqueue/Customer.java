@@ -1,4 +1,4 @@
-package com.test.blockingqueue;
+package com.java.blockingqueue;
 
 public class Customer
 {

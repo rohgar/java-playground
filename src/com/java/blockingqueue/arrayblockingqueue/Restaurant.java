@@ -1,11 +1,11 @@
-package com.test.blockingqueue.arrayblockingqueue;
+package com.java.blockingqueue.arrayblockingqueue;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import com.test.blockingqueue.Customer;
-import com.test.blockingqueue.Waiter;
-import com.test.blockingqueue.Reception;
+import com.java.blockingqueue.Customer;
+import com.java.blockingqueue.Reception;
+import com.java.blockingqueue.Waiter;
 
 /**
  * Restaurant has a capacity of serving 3 people at a time. Thus 
