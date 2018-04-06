@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class AllBinaryTreesMemoized
 {
 
-	private static HashMap<Integer, ArrayList<Node>> map = new HashMap<>();
+	private static HashMap<Integer, ArrayList<Node>> memo = new HashMap<>();
 
 	/**
 	 * Get all the binary tree which have n non-null nodes. Represent the null nodes
@@ -20,10 +20,9 @@ public class AllBinaryTreesMemoized
 	static ArrayList<Node> getAllBinaryTrees(int n)
 	{
 
-		ArrayList<Node> arrayList = map.get(n);
-		if (arrayList != null)
+		if (memo.get(n) != null)
 		{
-			return arrayList;
+			return memo.get(n);
 		}
 
 		ArrayList<Node> result = new ArrayList<>();
@@ -35,21 +34,21 @@ public class AllBinaryTreesMemoized
 		int remainingNodes = (n - 1); // excluding the root
 		for (int i = 0; i <= remainingNodes; i++)
 		{
-			ArrayList<Node> left = getAllBinaryTrees(i);
-			ArrayList<Node> right = getAllBinaryTrees(remainingNodes - i);
-			for (int p = 0; p < left.size(); p++)
+			ArrayList<Node> leftSolutions = getAllBinaryTrees(i);
+			ArrayList<Node> rightSolutions = getAllBinaryTrees(remainingNodes - i);
+			for (int p = 0; p < leftSolutions.size(); p++)
 			{
-				for (int q = 0; q < right.size(); q++)
+				for (int q = 0; q < rightSolutions.size(); q++)
 				{
 					Node node = new Node(n);
-					node.left = left.get(p);
-					node.right = right.get(q);
+					node.left = leftSolutions.get(p);
+					node.right = rightSolutions.get(q);
 					result.add(node);
 				}
 			}
 		}
 
-		map.put(n, result);
+		memo.put(n, result);
 		return result;
 	}
 

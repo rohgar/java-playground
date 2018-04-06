@@ -25,15 +25,15 @@ public class AllBinaryTrees
 		int remainingNodes = (n - 1); // excluding the root
 		for (int i = 0; i <= remainingNodes; i++)
 		{
-			ArrayList<Node> left = getAllBinaryTrees(i);
-			ArrayList<Node> right = getAllBinaryTrees(remainingNodes - i);
-			for (int p = 0; p < left.size(); p++)
+			ArrayList<Node> leftSolutions = getAllBinaryTrees(i);
+			ArrayList<Node> rightSolutions = getAllBinaryTrees(remainingNodes - i);
+			for (int p = 0; p < leftSolutions.size(); p++)
 			{
-				for (int q = 0; q < right.size(); q++)
+				for (int q = 0; q < rightSolutions.size(); q++)
 				{
 					Node node = new Node(n);
-					node.left = left.get(p);
-					node.right = right.get(q);
+					node.left = leftSolutions.get(p);
+					node.right = rightSolutions.get(q);
 					result.add(node);
 				}
 			}
