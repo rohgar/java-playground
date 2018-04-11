@@ -7,7 +7,7 @@ sourceSets
     {
         java 
         {
-            srcDirs = ["src"]
+            srcDirs = ["src/main/java"]
         }
     }
 }
@@ -20,5 +20,7 @@ repositories
 dependencies 
 {
   compile 'com.google.code.gson:gson:2.8.1'
+  //test 'org.mockito:mockito-all:
+  testCompile group: 'org.mockito', name: 'mockito-core', version: '2.10.0'
 }
 
