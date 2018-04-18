@@ -1,4 +1,4 @@
-package com.pg.threads;
+package com.pg.threads.executor;
 
 import java.util.HashSet;
 import java.util.Set;
