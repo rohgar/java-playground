@@ -10,6 +10,14 @@ public class Main
 		Child thread3 = new Child();
 
 		thread1.start();
+		if (thread1.isAlive())
+		{
+			System.out.println("Multiple calls to start() will cause an Exception.");
+		}
+		else
+		{
+			thread1.start();
+		}
 		thread2.start();
 		thread3.start();
 	}
